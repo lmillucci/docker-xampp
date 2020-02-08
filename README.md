@@ -1,4 +1,7 @@
-This image is intended for PHP+MySQL development. For convenience, it also runs SSH server to connect to. __Both MySQL and phpmyadmin use default XAMPP password__.
+# Docker XAMPP 7.4.1
+
+This image is intended for PHP+MySQL development. It is based on the work made by [tomsik68/docker-xampp](https://github.com/tomsik68/docker-xampp).  
+For convenience, it also runs SSH server to connect to. __Both MySQL and phpmyadmin use default XAMPP password__.
 
 
 ## Running the image:
@@ -6,7 +9,7 @@ This image is intended for PHP+MySQL development. For convenience, it also runs 
 This image uses /www directory for your page files, so you need to mount it.
 
 ```
-docker run --name myXampp -p 41061:22 -p 41062:80 -d -v ~/my_web_pages:/www tomsik68/xampp
+docker run --name myXampp -p 41061:22 -p 41062:80 -d -v ~/my_web_pages:/www lmillucci/docker-xampp:7.4.1
 ```
 The command above will expose the SSH server on port 41061 and HTTP server on port 41062.    
 Feel free to use your own name for the container...
@@ -14,7 +17,7 @@ Feel free to use your own name for the container...
 To connect to your web page, visit this URL: [http://localhost:41062/www](http://localhost:41062/www)    
 And to open up the XAMPP interface: [http://localhost:41062/](http://localhost:41062/)
 
-## additional How tos
+## Additional How tos
 
 ### ssh connection
 
